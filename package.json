@@ -1,0 +1,24 @@
+{
+  "name": "php-5.6",
+  "version": "1.0.0",
+  "description": "php:5.6-fpm, nginx, mysql ",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker-compose -p cake56 up --build",
+    "nocache": "docker-compose -p cake56 build --no-cache",
+    "stop": "docker-compose -p cake56 stop",
+    "down": "docker-compose -p cake56 down",
+    "exec-php": "docker exec -it php5.6 /bin/sh"
+  },
+  "author": "wiz <wiz@siot.do>",
+  "license": "ISC",
+  "devDependencies": {
+    "chalk": "^2.3.0",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "dockerode": "^2.5.3",
+    "dotenv": "^4.0.0",
+    "fs-extra": "^4.0.2"
+  }
+}

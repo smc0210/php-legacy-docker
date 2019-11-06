@@ -1,0 +1,8 @@
+.env
+.DS_Store
+/logs
+/.idea/*
+/.vscode/*
+/node_modules/*
+/mysql
+/logs
