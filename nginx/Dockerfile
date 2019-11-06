@@ -17,6 +17,9 @@ RUN set -x ; \
 RUN echo "upstream php-upstream { server php-fpm:9000; }" > /etc/nginx/conf.d/upstream.conf \
     && rm /etc/nginx/conf.d/default.conf
 
-CMD ["nginx"]
+#CMD ["nginx"]
+ADD ./startup.sh /opt/startup.sh
+RUN sed -i 's/\r//g' /opt/startup.sh
+CMD ["/bin/bash", "/opt/startup.sh"]
 
-EXPOSE 80 8080 443 9000
+EXPOSE 80 8080 443

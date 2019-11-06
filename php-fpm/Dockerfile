@@ -1,5 +1,5 @@
 FROM php:5.6-fpm-alpine
-LABEL wiz <wiz@siot.do>
+LABEL maintainer="wiz <wiz@siot.do>"
 
 RUN apk update && \
     # for composer
